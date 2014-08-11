@@ -1,8 +1,8 @@
 app.controller("HeadController", function(){
-	this.siteName = siteName
+	this.siteName = siteName;
+	this.siteIcon = siteIcon;
 });
 
-app.controller("MainController", function(){
+app.controller("MainController",function(){
 	this.siteName = siteName
-	this.message = "Site currently under construction";
 });

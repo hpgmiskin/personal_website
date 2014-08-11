@@ -7,20 +7,26 @@ app.directive("navbar", function(){
 	};
 });
 
-app.controller("navbarController",function(){
+app.controller("navbarController",["$scope","$location","$anchorScroll",function($scope,$location,$anchorScroll){
 	
+	$scope.gotoElement = function(element){
+		$location.hash(element);
+		$anchorScroll();
+	};
+
 	this.name = siteName;
+	this.icon = siteIcon;
 	this.link = siteLink;
 
 	this.left = [{
-		label: "Personal",
-		link: "#",
+		name: "personal",
+		label: "Personal"
 	},{
+		name: "projects",
 		label:"Projects",
-		link: "#",
 	},{
-		label:"Travel",
-		link: "#"
+		name: "technologies",
+		label:"Technologies",
 	}];
 
 	this.right = [{
@@ -30,4 +36,4 @@ app.controller("navbarController",function(){
 		label: "Contact",
 		link: "#"
 	}];
-});
+}]);

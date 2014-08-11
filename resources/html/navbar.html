@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="test/css" href="resources/css/navbar.css" />
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -5,11 +6,11 @@
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar" ng-repeat="i in [1,2,3]"></span>
       </button>
-      <a class="navbar-brand" href="{{navbar.link}}">{{navbar.name}}</a>
+      <a class="navbar-brand" href="{{navbar.link}}"><img class="navbar-icon" ng-src="{{navbar.icon}}"> {{navbar.name}}</a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li ng-repeat="item in navbar.left"><a href="{{item.link}}">{{item.label}}</a></li>
+        <li ng-repeat="item in navbar.left"><a href="" ng-click="gotoElement(item.name)">{{item.label}}</a></li>
       </ul>
 
       <form class="navbar-form navbar-right" role="search">
