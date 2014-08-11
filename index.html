@@ -1,0 +1,27 @@
+<html ng-app="home">
+	<head ng-controller="HeadController as head">
+		<link rel="stylesheet" type="test/css" href="library/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="test/css" href="library/css/bootstrap-theme.min.css" />
+		<link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+		<script type="text/javascript" src="library/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="library/js/angular.min.js"></script>
+		<script type="text/javascript" src="library/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="resources/js/app.js"></script>
+		<script type="text/javascript" src="resources/js/controller.js"></script>
+		<script type="text/javascript" src="resources/js/navbar.js"></script>
+		<script type="text/javascript" src="resources/js/personal.js"></script>
+		<title>{{head.siteName}}</title>
+	</head>
+	<body>
+		<navbar></navbar>
+		<div class="container" ng-controller="MainController as main">
+			<div class="row">
+				<div class="jumbotron">
+					<h1>{{main.siteName}}</h1>
+					<p>{{main.message}}</p>
+				</div>
+			</div>
+			<personal></personal>
+		</div>
+	</body>
+</html>
