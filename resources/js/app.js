@@ -17,5 +17,7 @@ var technologies = {
 	python: {name: "Python", imgSrc: "resources/images/python.png"},
 	django: {name: "Django", imgSrc: "resources/images/django.png"},
 	java: {name: "JAVA", imgSrc: "resources/images/java.png"},
-	bootstrap: {name: "Bootstrap", imgSrc: "resources/images/bootstrap.png"} 
+	bootstrap: {name: "Bootstrap", imgSrc: "resources/images/bootstrap.png"},
+	matlab: {name: "MATLAB", imgSrc: "resources/images/matlab.png"},
+	jquery: {name: "jQuery", imgSrc: "resources/images/jquery.png"}
 };

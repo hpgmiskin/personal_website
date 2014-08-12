@@ -4,3 +4,8 @@
 	top: -30px;
 	visibility: hidden;
 }
+
+.name {
+	text-decoration: underline;
+	color: blue;
+}

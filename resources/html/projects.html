@@ -1,8 +1,16 @@
 <div class="anchor" id="projects"></div>
 <div class="row">
 	<div class="page-header">
-  		<h1>Projects <small> - a collection of software development projects undertaken by the author</small></h1>
+		<h2>Projects <small> - a collection of software development projects undertaken by the author</small>
+  		<span class="pull-right">
+			<div class="btn-group">
+			  <button type="button" class="btn btn-default" ng-click="projects.order('date')">Date</button>
+			  <button type="button" class="btn btn-default" ng-click="projects.order('name')">Name</button>
+			</div>
+		</span>
+		</h2>
 	</div>
+	 <!-- | orderBy:project[projects.sort] -->
 	<div ng-repeat="project in projects.projects | filter:searchQuery" class="col-md-6">
 		<div class="panel panel-default">
 		  	<div class="panel-heading">
@@ -13,12 +21,15 @@
 			</div>
 			<div class="panel-body">
 				<div class="col-md-3 col-xs-6" ng-repeat="technology in project.technologies">
-			  	 	<div class="thumbnail" ng-click="projects.search(technology)">
+			  	 	<div 
+			  	 		class="thumbnail" 
+			  	 		ng-click="projects.search(technology)"
+						popover="{{projects.technologies[technology].name}}"
+						popover-placement="bottom"
+						popover-trigger="mouseenter"
+			  	 	>
 			      		<img 
 			      			ng-src="{{projects.technologies[technology].imgSrc}}"
-			      			popover="{{projects.technologies[technology].name}}"
-			      			popover-placement="bottom"
-			      			popover-trigger="mouseenter"
 			      			style="max-height:80px"
 			      		>
 			    	</div>
