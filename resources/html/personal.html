@@ -1,34 +1,27 @@
 <div class="anchor" id="personal"></div>
-<div class="row">
+<div class="row" ng-show="filteredPanels.length > 0">
 	<div class="page-header">
-  		<h1>Personal <small> - infromation of the autor of the site</small></h1>
+		<div class="row">
+			<div class="col-md-9">
+	  			<h2>Personal <small> - infromation of the autor of the site</small></h2>
+	  		</div>
+	  		<div class="col-md-3">
+		  		<div class="page-sort">
+		  			<div class="input-group">
+		  				<div class="input-group-addon">Sort By: </div>
+						<select class="form-control" ng-model="personal.sortField" ng-options="sortField.field as sortField.label for sortField in personal.sortFields"></select>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div ng-repeat="panel in personal.panels | filter:searchQuery" class="col-md-6">
+	<div ng-repeat="panel in filteredPanels = (personal.panels | filter:searchQuery | orderBy:personal.sortField)" class="col-md-6">
 		<div class="panel panel-default">
 		  <div class="panel-heading">
 		    <h3 class="panel-title">{{panel.title}}</h3>
 		  </div>
-		  <div class="panel-body" ng-show="panel.type == 'text'">
+		  <div class="panel-body">
 		  	{{panel.body}}
-		  </div>
-		  <div class="panel-body" ng-show="panel.type == 'list'">
-			<ul class="list-group">
-			  <li class="list-group-item" ng-repeat="item in panel.body track by $index">{{item}}</li>
-			</ul>
-		  </div>
-		  <div class="panel-body" ng-show="panel.type == 'table'">
-	  	    <table class="table">
-		      <thead>
-		        <tr>
-		          <th ng-repeat="cell in panel.body.head track by $index">{{cell}}</th>
-		        </tr>
-		      </thead>
-		      <tbody>
-		        <tr ng-repeat="row in panel.body.body track by $index">
-		          <td ng-repeat="cell in row track by $index">{{cell}}</td>
-		        </tr>
-		      </tbody>
-		    </table>
 		  </div>
 		</div>
 	</div>

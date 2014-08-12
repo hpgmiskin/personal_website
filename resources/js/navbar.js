@@ -7,17 +7,8 @@ app.directive("navbar", function(){
 	};
 });
 
-app.controller("navbarController",["$scope","$location","$anchorScroll",function($scope,$location,$anchorScroll){
+app.controller("navbarController",["$scope",function($scope){
 	
-	$scope.gotoElement = function(element){
-		$location.hash(element);
-		$anchorScroll();
-	};
-
-	this.name = siteName;
-	this.icon = siteIcon;
-	this.link = siteLink;
-
 	this.left = [{
 		name: "personal",
 		label: "Personal"

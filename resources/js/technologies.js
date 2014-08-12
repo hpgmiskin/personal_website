@@ -7,9 +7,14 @@ app.directive("technologies",function(){
 	};
 });
 
-app.controller("technologiesController",function(){
+app.controller("technologiesController",["$scope","technologiesService",function($scope,technologiesService){
 
-	this.test = "testing";
-	this.technologies = technologies;
+	this.sortField = "description.length";
+	this.sortFields = [
+		{label:"Nothing",field:"description.length"},
+		{label:"Name",field:"name"}
+	];
 
-});
+	this.technologies = technologiesService.getTechnologiesList();
+
+}]);

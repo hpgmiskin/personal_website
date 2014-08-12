@@ -1,5 +1,5 @@
 <html ng-app="home">
-	<head ng-controller="HeadController as head">
+	<head ng-controller="HeadController">
 		<!-- Library Imports -->
 		<link rel="stylesheet" type="test/css" href="library/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="test/css" href="library/css/bootstrap-theme.min.css" />
@@ -9,9 +9,17 @@
 		<script type="text/javascript" src="library/js/ui-bootstrap-tpls-0.11.0.min.js"></script>
 		<script type="text/javascript" src="library/js/highcharts.js"></script>
 
-		<!-- Resource Imports -->
+		<!-- Style Imports-->
 		<link rel="stylesheet" type="text/css" href="resources/css/index.css" />
+
+		<!-- Angular App Import -->
 		<script type="text/javascript" src="resources/js/app.js"></script>
+
+		<!-- Service Imports -->
+		<script type="text/javascript" src="resources/js/services/projects-service.js"></script>
+		<script type="text/javascript" src="resources/js/services/technologies-service.js"></script>
+
+		<!-- Controller Imports -->
 		<script type="text/javascript" src="resources/js/controller.js"></script>
 		<script type="text/javascript" src="resources/js/navbar.js"></script>
 		<script type="text/javascript" src="resources/js/slideshow.js"></script>
@@ -22,17 +30,17 @@
 		<script type="text/javascript" src="resources/js/contact.js"></script>
 
 		<!-- Page Properties -->
-		<title>{{head.siteName}}</title>
-		<link rel="shortcut icon" href="resources/images/person.png">
+		<title>{{siteName}}</title>
+		<link rel="shortcut icon" href="{{siteIcon}}">
 	</head>
-	<body>
+	<body ng-controller="MainController">
 		<navbar></navbar>
-		<div class="container" ng-controller="MainController as main">
+		<div class="container">
 			<slideshow></slideshow>
 			<personal></personal>
 			<projects></projects>
 			<technologies></technologies>
-			<!-- <chart></chart> -->
+			<chart></chart>
 			<contact></contact>
 		</div>
 	</body>

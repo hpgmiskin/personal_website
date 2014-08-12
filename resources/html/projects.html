@@ -1,17 +1,21 @@
 <div class="anchor" id="projects"></div>
-<div class="row">
+<div class="row" ng-show="filteredProjects.length > 0">
 	<div class="page-header">
-		<h2>Projects <small> - a collection of software development projects undertaken by the author</small>
-  		<span class="pull-right">
-			<div class="btn-group">
-			  <button type="button" class="btn btn-default" ng-click="projects.order('date')">Date</button>
-			  <button type="button" class="btn btn-default" ng-click="projects.order('name')">Name</button>
+		<div class="row">
+			<div class="col-md-9">
+	  			<h2>Projects <small> - a collection of projects</small></h2>
+	  		</div>
+	  		<div class="col-md-3">
+		  		<div class="page-sort">
+		  			<div class="input-group">
+		  				<div class="input-group-addon">Sort By: </div>
+						<select class="form-control" ng-model="projects.sortField" ng-options="sortField.field as sortField.label for sortField in projects.sortFields"></select>
+					</div>
+				</div>
 			</div>
-		</span>
-		</h2>
+		</div>
 	</div>
-	 <!-- | orderBy:project[projects.sort] -->
-	<div ng-repeat="project in projects.projects | filter:searchQuery" class="col-md-6">
+	<div ng-repeat="project in filteredProjects = (projects.projects | filter:searchQuery | orderBy:projects.sortField)" class="col-md-6">
 		<div class="panel panel-default">
 		  	<div class="panel-heading">
 		    	<h2 class="panel-title">{{project.name}}<em class="pull-right">{{project.date | date : 'MMMM yyyy'}}</em></h2>
@@ -23,7 +27,7 @@
 				<div class="col-md-3 col-xs-6" ng-repeat="technology in project.technologies">
 			  	 	<div 
 			  	 		class="thumbnail" 
-			  	 		ng-click="projects.search(technology)"
+			  	 		ng-click="search(technology)"
 						popover="{{projects.technologies[technology].name}}"
 						popover-placement="bottom"
 						popover-trigger="mouseenter"

@@ -7,8 +7,15 @@ app.directive("personal", function(){
 	};
 });
 
-app.controller("personalController",function(){
+app.controller("personalController",["$scope",function($scope){
 	
+	this.sortField = "";
+	this.sortFields = [
+		{label:"Nothing",field:""},
+		{label:"Title",field:"title"},
+		{label:"Content Type",field:"type"}
+	];
+
 	this.panels = [{
 		title: "Introduction",
 		type: "list",
@@ -34,4 +41,4 @@ app.controller("personalController",function(){
 		body: "Nulla diam risus, dictum eget porta vitae, vestibulum ac magna. In nec porta ipsum. Suspendisse et faucibus nisi, ut adipiscing arcu. Nunc eleifend ut libero vitae aliquet. Fusce pretium accumsan neque ut scelerisque. Vestibulum dictum mi et consectetur ultricies. Phasellus vehicula ipsum quis ultrices accumsan. In ullamcorper accumsan vulputate. Aliquam ut nisl non nunc venenatis bibendum sollicitudin sit amet orci. Sed purus diam, commodo eget fringilla vel, elementum sed."
 	}];
 
-});
+}]);
