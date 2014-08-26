@@ -13,3 +13,20 @@
 .page-sort {
 	padding-top: 16px;
 }
+
+.social-container{
+	margin: 20px;
+}
+
+.social-button {
+	width: auto;
+}
+
+.welcome {
+	margin: 40px 10px 10px 10px;
+	background-color: #eee;
+}
+
+.welcome p {
+	font-size: 16px;
+}

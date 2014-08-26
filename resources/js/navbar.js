@@ -10,8 +10,8 @@ app.directive("navbar", function(){
 app.controller("navbarController",["$scope",function($scope){
 	
 	this.left = [{
-		name: "personal",
-		label: "Personal"
+		name: "welcome",
+		label: "Welcome"
 	},{
 		name: "projects",
 		label:"Projects",
@@ -20,11 +20,12 @@ app.controller("navbarController",["$scope",function($scope){
 		label:"Technologies",
 	}];
 
-	this.right = [{
-		label: "Links",
-		link: "#"
-	},{
-		label: "Contact",
-		link: "#"
-	}];
+	this.right = [];
+	// {
+	// 	label: "Links",
+	// 	link: "#"
+	// },{
+	// 	label: "Contact",
+	// 	link: "#"
+	// }];
 }]);

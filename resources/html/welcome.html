@@ -1,0 +1,33 @@
+<div class="anchor" id="welcome"></div>
+<div class="welcome">
+	<div class="row">
+		<div class="col-md-4">
+			  <carousel interval="delay">
+			    <slide ng-repeat="picture in pictures" active="picture.active">
+			      <img ng-src="{{picture.image}}" style="margin:auto;">
+			      <div class="carousel-caption">
+			        <h4>{{slide.title}}</h4>
+			      </div>
+			    </slide>
+			  </carousel>
+		</div>
+		<div class="col-md-8">
+				<div>
+					<h2>Welcome to My Website</h2>
+					<p>My name is Henry Miskin, I have just completed a undergraduate degree in <a href="http://www.southampton.ac.uk/engineering/undergraduate/courses/mechanical_engineering/h300_beng_mechanical_engineering.page">Mechanical Engineering at the University of Southampton</a> and am going onto a masters in <a href="http://www3.imperial.ac.uk/pgprospectus/facultiesanddepartments/computing/postgraduatecourses/computingscience">Computing Science at Imperial College</a>. I have moved into computing science through a fondness of technology and programming. I have worked on web development both in internships and in my free time.</p>
+					<p>This website is primarily a showcase of myself and a number of the projects that I have undertaken. In addition this site serves as an environment in which I can practice my web development. The styling and interactivity contained within this site is through <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="https://angularjs.org/">AngularJS</a>.</p>
+					<p>To navigate around please either scroll down to look at some of the projects that I have worked on or click the projects link at the top of the page. To find out more about a technology used in any of the projects then click the logo to filter the projects by that technology. You will notice the search field change when a project is selected to view all results again please click the red cross to cancel the search.</p>
+					<p>If you would like to know more about me or more infromation about how this site is created please dont hesitate to get in contact with me <strong>using one of the buttons bellow:</strong></p>
+				</div>
+				<div class="row social-container">
+					<div class="col-md-3 col-md-offset-3">
+						<a class="btn btn-lg btn-default social-button" href="https://www.linkedin.com/profile/view?id=280603355&trk=nav_responsive_tab_profile">Linked<strong>IN</strong></a>
+					</div>
+					<div class="col-md-3">
+						<a class="btn btn-lg btn-default social-button" href="mailto:henry.miskin@talktalk.net?subject=Website">Email <span class="glyphicon glyphicon-envelope"></span></a>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+<!-- <hr/> -->
