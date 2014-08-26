@@ -1,6 +1,6 @@
 app.directive("personal", function(){
 	return {
-		restrict: "E",
+		restrict: "A",
 		templateUrl: "resources/html/personal.html",
 		controller: "personalController",
 		controllerAs: "personal"

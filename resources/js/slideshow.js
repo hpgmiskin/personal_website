@@ -1,6 +1,6 @@
 app.directive("slideshow", function(){
 	return {
-		restrict: "E",
+		restrict: "A",
 		templateUrl: "resources/html/slideshow.html",
 		controller: "slideshowController",
 		controllerAs: "slideshow"

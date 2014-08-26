@@ -5,6 +5,15 @@
 	visibility: hidden;
 }
 
+.site-icon {
+	height:30px;
+}
+
+.personal-photo {
+	max-height: 500px;
+	margin: auto;
+}
+
 .name {
 	text-decoration: underline;
 	color: blue;
@@ -26,7 +35,10 @@
 	margin: 40px 10px 10px 10px;
 	background-color: #eee;
 }
-
 .welcome p {
-	font-size: 16px;
+	font-size: 14px;
+}
+
+.welcome-text {
+	margin: 10px;
 }

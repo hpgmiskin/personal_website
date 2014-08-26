@@ -1,7 +1,5 @@
 <div class="anchor" id="technologies"></div>
-<!-- {{technologies.technologies}} -->
-<div class="row">
-	<!-- ng-show="filteredTechnologies.length > -1" -->
+<div class="row" ng-show="filteredTechnologies.length > 0">
 	<div class="page-header">
 		<div class="row">
 			<div class="col-md-9">
@@ -17,18 +15,18 @@
 			</div>
 		</div>
 	</div>
-	<div ng-repeat="technology in filteredTechnologies = (technologies.technologies | filter:searchQuery | orderBy:technologies.sortField)" class="col-md-4 col-xs-6">
+	<div ng-repeat="technology in filteredTechnologies = (technologies.technologies | filter:searchQuery | orderBy:technologies.sortField)" class="col-md-4 col-sm-6 col-xs-12">
 		<div class="panel panel-default">
 		  	<div class="panel-heading">
 		    	<h3 class="panel-title">{{technology.name}}</h3>
 		  	</div>
 			<div class="panel-body">
-				<div class="col-md-6 col-xs-12" style="height:180px">
+				<div class="col-md-6 col-xs-4" style="max-height:180px">
 			  	 	<div class="thumbnail">
 			      		<img ng-src="{{technology.imgSrc}}"/>
 			    	</div>
 			  	</div>
-			  	<div class="col-md-6 col-xs-12">
+			  	<div class="col-md-6 col-xs-8">
 			  		<p>{{technology.description}}</p>
 			  	</div>
 		  	</div>

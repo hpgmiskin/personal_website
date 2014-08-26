@@ -1,6 +1,6 @@
 app.directive("technologies",function(){
 	return {
-		restrict: "E",
+		restrict: "A",
 		templateUrl: "resources/html/technologies.html",
 		controller: "technologiesController",
 		controllerAs: "technologies"

@@ -1,6 +1,6 @@
 app.directive("navbar", function(){
 	return {
-		restrict: "E",
+		restrict: "A",
 		templateUrl: "resources/html/navbar.html",
 		controller: "navbarController",
 		controllerAs: "navbar"

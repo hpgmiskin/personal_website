@@ -15,7 +15,7 @@
 			</div>
 		</div>
 	</div>
-	<div ng-repeat="project in filteredProjects = (projects.projects | filter:searchQuery | orderBy:projects.sortField)" class="col-md-6">
+	<div ng-repeat="project in filteredProjects = (projects.projects | filter:searchQuery | orderBy:projects.sortField)" class="col-md-6 col-xs-12">
 		<div class="panel panel-default">
 		  	<div class="panel-heading">
 		    	<h2 class="panel-title">{{project.name}}<em class="pull-right">{{project.date | date : 'MMMM yyyy'}}</em></h2>
@@ -24,7 +24,7 @@
 				{{project.description}}
 			</div>
 			<div class="panel-body">
-				<div class="col-md-3 col-xs-6" ng-repeat="technology in project.technologies">
+				<div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="technology in project.technologies">
 			  	 	<div 
 			  	 		class="thumbnail" 
 			  	 		ng-click="search(technology)"

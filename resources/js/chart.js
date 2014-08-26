@@ -1,6 +1,6 @@
 app.directive("chart",function(){
 	return {
-		restrict: "E",
+		restrict: "AE",
 		templateUrl: "resources/html/chart.html",
 		controller: "chartController",
 		controllerAs: "chart"

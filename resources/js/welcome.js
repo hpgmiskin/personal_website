@@ -1,6 +1,6 @@
 app.directive("welcome",function(){
 	return {
-		restrict: "E",
+		restrict: "A",
 		templateUrl: "resources/html/welcome.html",
 		controller: "welcomeController",
 		controllerAs: "welcome"

@@ -1,49 +1,55 @@
-<html ng-app="home">
-	<head ng-controller="HeadController">
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" ng-app="home" id="ng-app">
+	<head >
+		<!-- Configure for IE -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<!-- Library Imports -->
-		<link rel="stylesheet" type="test/css" href="library/css/bootstrap.min.css" />
-		<link rel="stylesheet" type="test/css" href="library/css/bootstrap-theme.min.css" />
-		<script type="text/javascript" src="library/js/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="library/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="library/js/angular.min.js"></script>
-		<script type="text/javascript" src="library/js/ui-bootstrap-tpls-0.11.0.min.js"></script>
-		<script type="text/javascript" src="library/js/highcharts.js"></script>
+		<link rel="stylesheet" type="text/css" href="library/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="library/css/bootstrap-theme.min.css" />
 
 		<!-- Style Imports-->
 		<link rel="stylesheet" type="text/css" href="resources/css/index.css" />
 
+		<!-- Page Properties -->
+		<div ng-controller="HeadController">
+			<title>{{siteName}}</title>
+			<link rel="shortcut icon" href="{{siteIcon}}">
+		</div>
+	</head>
+
+	<body>
+		<div ng-controller="MainController">
+			<div navbar></div>
+			<div class="container">
+				<div welcome></div>
+				<div projects></div>
+				<div technologies></div>
+				<div contact></div>
+			</div>
+		</div>
+		
+		<!-- Library Imports -->
+		<script type="text/javascript" src="library/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="library/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="library/js/angular.min.js"></script>
+		<script type="text/javascript" src="library/js/ui-bootstrap-tpls-0.11.0.min.js"></script>
+		
 		<!-- Angular App Import -->
 		<script type="text/javascript" src="resources/js/app.js"></script>
 
-		<!-- Service Imports -->
+		<!-- Angular Service Imports -->
 		<script type="text/javascript" src="resources/js/services/projects-service.js"></script>
 		<script type="text/javascript" src="resources/js/services/technologies-service.js"></script>
 
-		<!-- Controller Imports -->
+		<!-- Angular Controller Imports -->
 		<script type="text/javascript" src="resources/js/controller.js"></script>
 		<script type="text/javascript" src="resources/js/navbar.js"></script>
 		<script type="text/javascript" src="resources/js/welcome.js"></script>
-		<script type="text/javascript" src="resources/js/slideshow.js"></script>
-		<script type="text/javascript" src="resources/js/personal.js"></script>
-		<script type="text/javascript" src="resources/js/projects.js"></script>
+		<script type="text/javascript" src="resources/js/projects.js"></script>/
 		<script type="text/javascript" src="resources/js/technologies.js"></script>
-		<script type="text/javascript" src="resources/js/chart.js"></script>
 		<script type="text/javascript" src="resources/js/contact.js"></script>
-
-		<!-- Page Properties -->
-		<title>{{siteName}}</title>
-		<link rel="shortcut icon" href="{{siteIcon}}">
-	</head>
-	<body ng-controller="MainController">
-		<navbar></navbar>
-		<div class="container">
-			<!-- <personal></personal> -->
-			<!-- <slideshow></slideshow> -->
-			<welcome></welcome>
-			<projects></projects>
-			<technologies></technologies>
-			<!-- <chart></chart> -->
-			<contact></contact>
-		</div>
 	</body>
 </html>
