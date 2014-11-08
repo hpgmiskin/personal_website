@@ -21,24 +21,50 @@
 		    	<h2 class="panel-title">{{project.name}}<em class="pull-right">{{project.date | date : 'MMMM yyyy'}}</em></h2>
 		  	</div>
 			<div class="panel-body">
-				{{project.description}}
-			</div>
-			<div class="panel-body">
-				<div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="technology in project.technologies">
-			  	 	<div 
-			  	 		class="thumbnail" 
-			  	 		ng-click="search(technology)"
-						popover="{{projects.technologies[technology].name}}"
-						popover-placement="bottom"
-						popover-trigger="mouseenter"
-			  	 	>
-			      		<img 
-			      			ng-src="{{projects.technologies[technology].imgSrc}}"
-			      			style="max-height:80px"
-			      		>
+
+				<!-- DESCRIPTION -->
+				<div class="row">
+					<div class="col-md-12">
+						{{project.description}}
+					</div>
+				</div>	
+
+				<!-- PADDING -->
+				<div class="row">
+					<div class="vert-pad-20"></div>
+				</div>
+
+				<!-- LINKS -->
+				<div class="row" ng-show="{{project.links.length > 0}}">		  
+	  			<div class="col-md-12 col-xs-12">
+		  			<div class="well well-sm">
+		  				<div class="row">
+			  				<div class="col-md-2 col-xs-3">
+				  				<h5 class="pull-right">GitHub:</h5>
+			  				</div>
+			  				<div class="col-md-{{10/project.links.length}} col-xs-{{8/project.links.length}}" ng-repeat="link in project.links">
+				  				<a class="btn btn-default pull-right" href="{{link.path}}">{{link.name}}</a>
+			  				</div>
+			  			</div>
+		  			</div>
+		  		</div>
+				</div>
+
+				<!-- TECHNOLOGIES -->
+				<div class="row">
+					<div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="technology in project.technologies">
+			  	 	<div 	class="thumbnail" ng-click="search(technology)"
+									popover="{{projects.technologies[technology].name}}"
+									popover-placement="bottom"
+									popover-trigger="mouseenter">
+			      	<img 	ng-src="{{projects.technologies[technology].imgSrc}}"
+			      				style="max-height:80px">
 			    	</div>
-			  	</div>
+				  </div>
 		  	</div>
+
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

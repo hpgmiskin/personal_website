@@ -10,7 +10,8 @@ app.service("technologiesService",function(){
 		bootstrap: {name: "Bootstrap", imgSrc: "resources/images/bootstrap.png", description:"Bootstrap is a collection of tools for creating websites and web applications. It contains HTML and CSS-based design templates to create elegent interface components."},
 		matlab: {name: "MATLAB", imgSrc: "resources/images/matlab.png", description:"MATLAB is a multi-paradigm numerical computing environment and fourth generation programming language."},
 		jquery: {name: "jQuery", imgSrc: "resources/images/jquery.png", description:"jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML."},
-		angular: {name:"AngularJS", imgSrc:"resources/images/angular.png", description:"AngularJS is an open-source JavaScript framework, that assists with running single-page applications."}
+		angular: {name:"AngularJS", imgSrc:"resources/images/angular.png", description:"AngularJS is an open-source JavaScript framework, that assists with running single-page applications."},
+		spring: {name:"SpiringMVC", imgSrc:"resources/images/spring.png", description:"The Spring Framework is an open source application framework and inversion of control container for the Java platform."}
 	};
 
 	this.getTechnologies = function(){
