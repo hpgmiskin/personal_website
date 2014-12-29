@@ -39,11 +39,29 @@
 	  			<div class="col-md-12 col-xs-12">
 		  			<div class="well well-sm">
 		  				<div class="row">
-			  				<div class="col-md-2 col-xs-3">
+			  				<div class="col-xs-2">
+				  				<h5 class="pull-right">Links:</h5>
+			  				</div>
+			  				<div class="col-xs-1" ng-show="project.gitLinks.length == 3"></div>
+			  				<div ng-class="projects.getLinkClass(project.links.length)" ng-repeat="link in project.links">
+				  				<button class="btn btn-primary pull-right" href="{{link.path}}">{{link.name}}</button>
+			  				</div>
+			  			</div>
+		  			</div>
+		  		</div>
+				</div>
+
+				<!-- GIT -->
+				<div class="row" ng-show="{{project.gitLinks.length > 0}}">		  
+	  			<div class="col-md-12 col-xs-12">
+		  			<div class="well well-sm">
+		  				<div class="row">
+			  				<div class="col-xs-2">
 				  				<h5 class="pull-right">GitHub:</h5>
 			  				</div>
-			  				<div class="col-md-{{10/project.links.length}} col-xs-{{8/project.links.length}}" ng-repeat="link in project.links">
-				  				<a class="btn btn-default pull-right" href="{{link.path}}">{{link.name}}</a>
+			  				<div class="col-xs-1" ng-show="project.gitLinks.length == 3"></div>
+			  				<div ng-class="projects.getLinkClass(project.gitLinks.length)" ng-repeat="gitLink in project.gitLinks">
+				  				<button class="btn btn-secondary pull-right" href="{{gitLink.path}}">{{gitLink.name}}</button>
 			  				</div>
 			  			</div>
 		  			</div>

@@ -9,7 +9,7 @@ app.directive("technologies",function(){
 
 app.controller("technologiesController",["$scope","technologiesService",function($scope,technologiesService){
 
-	this.sortField = "description.length";
+	this.sortField = "-description.length";
 	this.sortFields = [
 		{label:"Nothing",field:"description.length"},
 		{label:"Name",field:"name"}
