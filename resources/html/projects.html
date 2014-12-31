@@ -44,7 +44,7 @@
 			  				</div>
 			  				<div class="col-xs-1" ng-show="project.gitLinks.length == 3"></div>
 			  				<div ng-class="projects.getLinkClass(project.links.length)" ng-repeat="link in project.links">
-				  				<button class="btn btn-primary pull-right" href="{{link.path}}">{{link.name}}</button>
+				  				<a href="{{link.path}}"><button class="btn btn-primary pull-right">{{link.name}}</button></a>
 			  				</div>
 			  			</div>
 		  			</div>
@@ -61,7 +61,7 @@
 			  				</div>
 			  				<div class="col-xs-1" ng-show="project.gitLinks.length == 3"></div>
 			  				<div ng-class="projects.getLinkClass(project.gitLinks.length)" ng-repeat="gitLink in project.gitLinks">
-				  				<button class="btn btn-secondary pull-right" href="{{gitLink.path}}">{{gitLink.name}}</button>
+				  				<a href="{{gitLink.path}}"><button class="btn btn-secondary pull-right">{{gitLink.name}}</button></a>
 			  				</div>
 			  			</div>
 		  			</div>

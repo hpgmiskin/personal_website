@@ -48,7 +48,7 @@ app.service("projectsService",function(){
 		date: new Date(2014,3,1),
 		description: "For my third year project I worked on a project that looked at collecting atmospheric data using an autonomous unmanned aerial vehicle. I developed a route planner which optimised the spread and depth of data collection while minimising the energy consumption. To achieve this I considered the shortest path through a sampling plan then developed on this to form a navigable path for a UAV.",
 		technologies: ["python","matlab","html","css","bootstrap","django","js","jquery"],
-		links: [{name: "Project Write Up", path:"#"}],
+		links: [{name: "Project Write Up", path:"http://1drv.ms/1rAiTKQ"}],
 		gitLinks: [
 			{name: "Routing Logic", path: "https://github.com/miskinh/route_planner"},
 			{name: "Web Application", path: "https://github.com/miskinh/atmospheric_data_collector"}
